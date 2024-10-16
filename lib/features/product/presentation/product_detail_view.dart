@@ -18,28 +18,10 @@ class ProductDetailView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            children: [
-              Container(
-                width: 1 * MediaQuery.of(context).size.width,
-                height: .46 * MediaQuery.of(context).size.height,
-                decoration:  BoxDecoration(image: DecorationImage(image: NetworkImage(productModel?.image??''),),),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: .048 * MediaQuery.of(context).size.width,
-                  top: .022 * MediaQuery.of(context).size.height,
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_ios_new_sharp,
-                  ),
-                ),
-              ),
-            ],
+          Container(
+            width: 1 * MediaQuery.of(context).size.width,
+            height: .46 * MediaQuery.of(context).size.height,
+            decoration:  BoxDecoration(image: DecorationImage(image: NetworkImage(productModel?.image??''),),),
           ),
           Padding(
             padding:  EdgeInsets.only(left:.048*MediaQuery.of(context).size.width,),
